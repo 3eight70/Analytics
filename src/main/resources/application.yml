@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: analytics
+  datasource:
+    url: ${POSTGRES_CONNECTION_STRING}
+    username: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+
+  liquibase:
+    url: ${POSTGRES_CONNECTION_STRING}
+    user: ${POSTGRES_USER}
+    password: ${POSTGRES_PASSWORD}
